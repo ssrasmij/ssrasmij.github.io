@@ -215,12 +215,11 @@ img {
 }
 
 .hero-title .hero-word {
-  background: linear-gradient(120deg, #4b4244, #d0a0a3, #e0c5c4);
+  display: inline-block;
+  background: linear-gradient(120deg, #7b5a5d, #d0a0a3, #f5e2e3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-size: 200% 200%;
-  display: inline-block;
 }
 
 .hero-title .hero-word:nth-child(1) {
