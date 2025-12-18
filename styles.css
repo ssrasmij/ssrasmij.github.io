@@ -221,9 +221,6 @@ img {
   color: transparent;
   background-size: 200% 200%;
   display: inline-block;
-  animation:
-    gradient-shift 9s ease-in-out infinite alternate,
-    bubble 3.2s ease-in-out infinite;
 }
 
 .hero-title .hero-word:nth-child(1) {
