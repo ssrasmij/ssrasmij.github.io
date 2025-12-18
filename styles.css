@@ -147,7 +147,6 @@ img {
     radial-gradient(circle at bottom right, rgba(240, 197, 196, 0.85), transparent 55%),
     linear-gradient(to bottom right, #ffffff, #f5e2e3);
   box-shadow: var(--shadow-soft);
-  animation: hero-float 14s ease-in-out infinite;
 }
 
 .hero-layout {
@@ -309,6 +308,13 @@ img {
   );
   padding: 2.25rem 1.75rem 2.3rem;
   box-shadow: var(--shadow-soft);
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out;
 }
 
 .section-header {

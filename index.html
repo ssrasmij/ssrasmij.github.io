@@ -27,7 +27,7 @@
     <main>
       <!-- Hero -->
       <section id="hero" class="hero">
-        <div class="container hero-content">
+        <div class="container hero-content tilt-card">
           <div class="hero-layout">
             <div class="hero-main">
               <p class="eyebrow">Software Engineer / Cloud Engineer</p>
@@ -53,7 +53,7 @@
 
       <!-- About -->
       <section id="about" class="section">
-        <div class="container section-content">
+        <div class="container section-content tilt-card">
           <div class="section-header">
             <h2>About</h2>
             <p>Get to know me</p>
@@ -213,6 +213,44 @@
         if (yearEl) {
           yearEl.textContent = new Date().getFullYear();
         }
+      })();
+
+      // Subtle 3D tilt that follows the mouse for hero + about tiles on desktop
+      (function () {
+        if (window.matchMedia("(pointer: coarse)").matches) return; // skip on touch
+
+        var cards = document.querySelectorAll(".tilt-card");
+        cards.forEach(function (card) {
+          var bounds;
+
+          function handleMove(e) {
+            if (!bounds) bounds = card.getBoundingClientRect();
+            var x = e.clientX - bounds.left;
+            var y = e.clientY - bounds.top;
+            var centerX = bounds.width / 2;
+            var centerY = bounds.height / 2;
+
+            var rotateX = ((y - centerY) / centerY) * -8;
+            var rotateY = ((x - centerX) / centerX) * 8;
+
+            card.style.transform =
+              "perspective(1000px) rotateX(" +
+              rotateX.toFixed(2) +
+              "deg) rotateY(" +
+              rotateY.toFixed(2) +
+              "deg)";
+          }
+
+          card.addEventListener("mouseenter", function () {
+            bounds = card.getBoundingClientRect();
+          });
+
+          card.addEventListener("mousemove", handleMove);
+
+          card.addEventListener("mouseleave", function () {
+            card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+          });
+        });
       })();
     </script>
   </body>
