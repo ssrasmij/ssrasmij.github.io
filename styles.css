@@ -212,33 +212,10 @@ img {
   opacity: 0;
   animation: fade-up 0.8s ease-out forwards;
   animation-delay: 0.16s;
-}
-
-.hero-title .hero-word {
-  display: inline-block;
   background: linear-gradient(120deg, #7b5a5d, #d0a0a3, #f5e2e3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.hero-title .hero-word:nth-child(1) {
-  animation-delay: 0s;
-}
-.hero-title .hero-word:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.hero-title .hero-word:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.hero-title .hero-word:nth-child(4) {
-  animation-delay: 0.45s;
-}
-.hero-title .hero-word:nth-child(5) {
-  animation-delay: 0.6s;
-}
-.hero-title .hero-word:nth-child(6) {
-  animation-delay: 0.75s;
 }
 
 .hero-subtitle {
