@@ -147,6 +147,7 @@ img {
     radial-gradient(circle at bottom right, rgba(240, 197, 196, 0.85), transparent 55%),
     linear-gradient(to bottom right, #ffffff, #f5e2e3);
   box-shadow: var(--shadow-soft);
+  animation: hero-float 14s ease-in-out infinite;
 }
 
 .hero-layout {
@@ -224,6 +225,15 @@ img {
 .hero-subtitle .role {
   color: var(--accent);
   font-weight: 500;
+}
+
+.hero-location {
+  margin: 0 0 1.4rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  opacity: 0;
+  animation: fade-up 0.9s ease-out forwards;
+  animation-delay: 0.44s;
 }
 
 .hero-actions {
@@ -423,6 +433,21 @@ img {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes hero-float {
+  0% {
+    transform: translateY(0);
+    box-shadow: var(--shadow-soft);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(208, 160, 163, 0.35);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: var(--shadow-soft);
   }
 }
 
