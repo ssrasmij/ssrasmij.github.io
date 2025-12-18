@@ -212,7 +212,7 @@ img {
   opacity: 0;
   animation: fade-up 0.8s ease-out forwards;
   animation-delay: 0.16s;
-  background: linear-gradient(120deg, #7b5a5d, #d0a0a3, #f5e2e3);
+  background: linear-gradient(120deg, #4b4244, #7b5a5d, #d0a0a3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
