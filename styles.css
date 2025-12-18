@@ -412,6 +412,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
 
 .project-gif-label {
@@ -422,6 +426,12 @@ img {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.project-card:hover .project-image-wrapper {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(208, 160, 163, 0.35);
+  border-color: rgba(208, 160, 163, 0.95);
 }
 
 @keyframes tile-gradient {
