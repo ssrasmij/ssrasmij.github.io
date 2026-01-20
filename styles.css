@@ -600,6 +600,20 @@ img {
   margin-right: 0;
 }
 
+#skills .card {
+  text-align: center;
+}
+
+#skills .card ul {
+  text-align: left;
+}
+
+#skills .project-image-wrapper .project-gif-label {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
 #projects .project-content p {
   color: #4b5563;
 }
