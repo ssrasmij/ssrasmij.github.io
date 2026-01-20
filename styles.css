@@ -390,7 +390,7 @@ img {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.35rem;
 }
 
@@ -462,6 +462,36 @@ img {
 
 .project-grid {
   margin-top: 0.3rem;
+}
+
+#projects .project-grid {
+  display: flex;
+  gap: 1.35rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.6rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--accent) rgba(255, 196, 196, 0.35);
+  scrollbar-width: thin;
+}
+
+#projects .project-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+#projects .project-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+#projects .project-grid::-webkit-scrollbar-track {
+  background: rgba(255, 196, 196, 0.35);
+  border-radius: 999px;
+}
+
+#projects .project-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, var(--accent), #FFC4C4);
+  border-radius: 999px;
 }
 
 .project-card {
@@ -540,13 +570,34 @@ img {
   color: #4b5563;
 }
 
-/* Reverse colors: Skills headlines use muted (red), Skills content use dark gray */
+.inline-link {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.inline-link:hover {
+  color: #111827;
+}
+
+.inline-link::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0;
+  font-size: 0.85em;
+  transform: translateY(-1px);
+}
+
 #skills .card h3 {
   color: var(--muted);
 }
 
 #skills .card ul {
   color: #4b5563;
+}
+
+#skills .card li::before {
+  content: "";
+  margin-right: 0;
 }
 
 #projects .project-content p {
@@ -657,5 +708,3 @@ img {
     height: 140px;
   }
 }
-
-
